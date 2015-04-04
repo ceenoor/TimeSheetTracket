@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <h1 style="font-size:30px;"><b>Register</b></h1>
+    <center><form method = "POST" action = "/register">
+        <table>
+           <tr><td style="font-size:15px;">Username</td><td><input type="text" id="username" name="username" /></td></tr> 
+           <tr><td style="font-size:15px;">Password</td><td><input type="password" id="password" name="password" /></td></tr>
+           <tr><td style="font-size:15px;">User Type</td><td><select name="type">
+					<option value="admin">Administrator</option>
+					<option value="crew leader">Crew Leader</option></select>
+			</td></tr>
+        </table>
+        <input type="submit" value="Register" />
+        {% if error == True %}<span style="color:red;"><b>Invalid Login Information.</b></span>{% endif %}</p>
+    </form></center>
+</div>
+{% endblock %}

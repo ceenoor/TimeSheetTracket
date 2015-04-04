@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <h1 style="font-size:30px;"><b>Create New Job</b></h1>
+    <form method="POST" action="/addJob">
+         <center>
+             <table>
+                 <tr><td style="font-size:15px;">Job Name:</td><td><input type="text" id="jobName" name="jobName" /></td></tr>
+                 <tr><td style="font-size:15px;">Job ID:</td><td><input type="text" id="jobID" name="jobID" /></td></tr> 
+             </table>
+        </center>
+        <input type="submit" value="Add Job" />
+    </form>
+</div>
+{% endblock %}

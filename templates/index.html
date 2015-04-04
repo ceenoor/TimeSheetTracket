@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <center><h1>LandScape TimeSheet Tracker</h1>
+    <p>Welcome {% print session['username'] %}, to the TimeSheet Tracker
+      <a href="http://umw.edu">University of Mary Washington</a></p>
+      <p>
+        <div style="display:inline-block;">
+        <h3>Current Employees</h3>
+        <table>
+          <tr><td><b>Employee ID</b></td><td><b>First Name</b></td><td><b>Last Name</b></td></tr>
+        {% for element in myList %} 
+           <tr><td>{{element[0]}}</td><td>{{element[1]}}</td><td>{{element[2]}}</td></tr>  
+        {% endfor %}
+        </table>
+        </div>
+        <div style="display:inline-block;margin-left:50px;">
+        <h3>Current Jobs</h3>
+        <table>
+          <tr><td><b>Job ID</b></td><td><b>Job Name</b></td></tr>
+        {% for element in myListTwo %} 
+           <tr><td>{{element[0]}}</td><td>{{element[1]}}</td></tr>  
+        {% endfor %}
+        </table>
+        </div>
+      </p>
+      <p>
+        <h3>Time Sheet</h3>
+        <table>
+          <tr ><td style="width:10em;"><b>Employee ID</b></td><td style="width:10em;"><b>Job ID</b></td><td style="width:10em;"><b>Total Time</b></td></tr>
+        </table>
+      </p></center>
+</div>  
+ 
+					
+
+{% endblock %}

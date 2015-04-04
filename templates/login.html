@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <h1 style="font-size:30px;"><b>Login</b></h1>
+    <center><form method = "POST" action = "/login">
+        <table>
+           <tr><td style="font-size:15px;">Username</td><td><input type="text" id="username" name="username" /></td></tr> 
+           <tr><td style="font-size:15px;">Password</td><td><input type="password" id="password" name="password" /></td></tr>
+        </table>
+        <input type="submit" value="Login" />
+    </form>
+    {% if error == True %}<p><span style="color:red;"><b>Invalid Login Information.</b></span></p>{% endif %}
+    </center>
+</div>
+{% endblock %}

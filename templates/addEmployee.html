@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <h1 style="font-size:30px;"><b>Create New Employee</b></h1>
+    <form method="POST" action="/addEmployee">
+         <center>
+             <table>
+                 <tr><td style="font-size:15px;">First Name:</td><td><input type="text" id="first" name="first" /></td></tr>
+                 <tr><td style="font-size:15px;">Last Name:</td><td><input type="text" id="last" name="last" /></td></tr> 
+             </table>
+        </center>
+        <input type="submit" value="Add Employee" />
+    </form>
+</div>
+{% endblock %}
