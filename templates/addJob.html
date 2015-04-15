@@ -7,10 +7,11 @@
          <center>
              <table>
                  <tr><td style="font-size:15px;">Job Name:</td><td><input type="text" id="jobName" name="jobName" /></td></tr>
-                 <tr><td style="font-size:15px;">Job ID:</td><td><input type="text" id="jobID" name="jobID" /></td></tr> 
+                 <tr><td style="font-size:15px;">Job ID:</td><td><input type="number" id="jobID" name="jobID" /></td></tr> 
              </table>
         </center>
         <input type="submit" value="Add Job" />
+    <p> {% if error == True %}<span style="color:red;"><b>Invalid Job Information.</b></span>{% endif %}</p>
     </form>
 </div>
 {% endblock %}

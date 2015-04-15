@@ -7,18 +7,13 @@
          <center><table>
            <tr><td style="font-size:15px;">Employee</td><td><select name="employee">
 					{% for element in myList %}
-					<option value={{element[1]}}>{{element[1]}} {{element[2]}}</option>
+					<option value={{element[0]}}>{{element[1]}} {{element[2]}}</option>
 					{% endfor %}</select>
 			</td></tr>
 			<tr><td style="font-size:15px;">Job Id</td><td><select name="jobId">
 					{% for element in myListTwo %}
 					<option value={{element[0]}}>{{element[1]}}</option>
 					{% endfor %}</select>
-			</td></tr>
-			<tr><td style="font-size:15px;">Task Id</td><td><select name="taskId">
-					{% for element in myListTwo %}
-					<option value={{element[2]}}>{{element[2]}}</option>
-					{% endfor %}</select></select>
 			</td></tr>
 			<tr><td style="font-size:15px;">Start Time</td><td><select name="startTimeHour">
 					<option value="1">1</option>
@@ -66,6 +61,7 @@
 			</td></tr>
         </table></center>
         <input type="submit" value="Enter Hours" />
-    </form>
+    </form><center>
+     {% if error == True %}<p><span style="color:red;"><b>Invalid Hour Entry.</b></span></p>{% endif %}</center>
 </div>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block content %}
 <div class="center">
     <center><h1>LandScape TimeSheet Tracker</h1>
-    <p>Welcome {% print session['username'] %}, to the TimeSheet Tracker
+    <p>Welcome <b>{% print session['username'] %},</b> to the TimeSheet Tracker
       <a href="http://umw.edu">University of Mary Washington</a></p>
       <p>
         <div style="display:inline-block;">
@@ -29,6 +29,9 @@
         <h3>Time Sheet</h3>
         <table>
           <tr ><td style="width:10em;"><b>Employee ID</b></td><td style="width:10em;"><b>Job ID</b></td><td style="width:10em;"><b>Total Time</b></td></tr>
+          {% for element in timeSheet %}
+           <tr><td>{{element[0]}}</td><td>{{element[1]}}</td><td>{{element[5]|int - element[4]|int}} Hrs. and {{element[3]|int - element[2]|int}} Mins.</td></tr>  
+          {% endfor %}
         </table>
       </p></center>
 </div>  
